@@ -45,7 +45,7 @@
             <section>
                 <h2 class="text-lg font-bold text-stone-600 mb-3 text-center uppercase tracking-wider">Acesso Rápido</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <a href="#" target="_blank" class="flex flex-col items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white p-4 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="https://chat.whatsapp.com/GixTZVdRbAzD8xTZf4i1dG" target="_blank" class="flex flex-col items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white p-4 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.267.651 4.383 1.806 6.034l-1.225 4.429 4.57-1.192z"/></svg>
                         <strong class="text-md font-semibold">Entrar no Grupo</strong>
                     </a>
@@ -106,74 +106,83 @@
     </div>
 
     <!-- Modal de Contribuição -->
-    <div id="contribution-modal" class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center p-4">
-        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl p-6 md:p-8 relative">
+    <div id="contribution-modal" class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl p-6 md:p-8 relative my-8">
             <button id="close-contribution-modal" class="absolute top-4 right-4 text-stone-500 hover:text-stone-800">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
             <h2 class="text-2xl font-bold text-sky-800 mb-2">Painel de Contribuições</h2>
             <p class="text-stone-600 mb-6">O total arrecadado é atualizado em tempo real.</p>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Coluna da Esquerda: Total, Formulário, PIX e Recentes -->
-                <div class="md:col-span-2 space-y-6">
+            <div class="flex flex-col gap-6">
+                <!-- Total e Meta -->
+                <div class="space-y-4">
                     <div class="bg-sky-100 text-sky-900 rounded-lg p-4 text-center">
                         <p class="text-lg">Total Arrecadado</p>
                         <p class="text-4xl font-extrabold">R$ <span id="total-amount">0,00</span></p>
                     </div>
-
                     <div>
-                        <h3 class="font-bold text-lg mb-2">Adicionar Contribuição</h3>
-                        <form id="contribution-form" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                            <input type="text" id="contributor-name" placeholder="Seu nome" class="sm:col-span-2 w-full p-2 border rounded-md focus:ring-2 focus:ring-sky-500" required>
-                            <input type="number" id="contribution-amount" placeholder="Valor (R$)" step="0.01" min="0.01" class="w-full p-2 border rounded-md focus:ring-2 focus:ring-sky-500" required>
-                            <button type="submit" class="sm:col-span-3 w-full bg-sky-600 hover:bg-sky-700 text-white font-bold p-2 rounded-md transition-colors">Adicionar</button>
-                        </form>
-                    </div>
-
-                    <!-- Seção PIX -->
-                    <div>
-                        <h3 class="font-bold text-lg mb-2">Ou contribua via PIX</h3>
-                        <div class="bg-stone-50 p-4 rounded-lg border">
-                            <div class="space-y-1">
-                                <p class="text-sm"><strong class="font-semibold text-stone-700 w-24 inline-block">Chave:</strong> <span id="pix-key">53 991853922</span> (Celular)</p>
-                                <p class="text-sm"><strong class="font-semibold text-stone-700 w-24 inline-block">Nome:</strong> Talisson Bergmann Hartwig</p>
-                                <p class="text-sm"><strong class="font-semibold text-stone-700 w-24 inline-block">Instituição:</strong> Nubank</p>
-                            </div>
-                            <button id="copy-pix-btn" class="mt-3 w-full bg-gray-600 hover:bg-gray-700 text-white font-bold p-2 rounded-md transition-colors text-sm flex items-center justify-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                                </svg>
-                                Copiar Chave PIX
-                            </button>
+                        <div class="flex justify-between items-center text-sm font-medium text-stone-600 mb-1">
+                            <span>Progresso da Meta</span>
+                            <span id="goal-progress-text">R$ 0,00 / R$ 309,41</span>
                         </div>
-                    </div>
-
-                    <div>
-                        <h3 class="font-bold text-lg mb-2">Contribuições Recentes</h3>
-                        <div class="h-40 overflow-y-auto border rounded-lg p-2 bg-stone-50">
-                            <table class="w-full text-left text-sm">
-                                <thead class="sticky top-0 bg-stone-50">
-                                    <tr><th class="p-2">Nome</th><th class="p-2">Valor</th><th class="p-2">Data</th></tr>
-                                </thead>
-                                <tbody id="contributions-list">
-                                    <tr><td colspan="3" class="text-center p-4 text-stone-500">A carregar...</td></tr>
-                                </tbody>
-                            </table>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div id="goal-progress-bar" class="bg-green-500 h-4 rounded-full text-center text-white text-xs font-bold leading-4" style="width: 0%;">0%</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Coluna da Direita: Ranking -->
-                <div class="md:col-span-1">
-                    <div class="bg-stone-100 rounded-lg p-4 h-full">
-                        <h3 class="font-bold text-lg mb-3 flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500" viewBox="0 0 20 20" fill="currentColor"><path d="M11.15 3.422a.75.75 0 00-1.06 0L8.25 5.262a.75.75 0 00.976 1.138 4.5 4.5 0 015.048 0 .75.75 0 00.976-1.138l-1.84-1.84zM10.5 9.75a.75.75 0 00-1.5 0v4.5a.75.75 0 001.5 0v-4.5z" /><path fill-rule="evenodd" d="M3.569 6.222l1.84-1.84a.75.75 0 00-1.06-1.06l-1.84 1.84a.75.75 0 101.06 1.06zM15.495 4.382l1.84 1.84a.75.75 0 101.06-1.06l-1.84-1.84a.75.75 0 00-1.06 1.06zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z" clip-rule="evenodd" /></svg>
-                            Top Contribuintes
-                        </h3>
-                        <ol id="ranking-list" class="space-y-2">
-                            <li class="text-center p-4 text-stone-500">A calcular ranking...</li>
-                        </ol>
+                <!-- Formulário -->
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Adicionar Contribuição</h3>
+                    <form id="contribution-form" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <input type="text" id="contributor-name" placeholder="Seu nome" class="sm:col-span-2 w-full p-2 border rounded-md focus:ring-2 focus:ring-sky-500" required>
+                        <input type="number" id="contribution-amount" placeholder="Valor (R$)" step="0.01" min="0.01" class="w-full p-2 border rounded-md focus:ring-2 focus:ring-sky-500" required>
+                        <button type="submit" class="sm:col-span-3 w-full bg-sky-600 hover:bg-sky-700 text-white font-bold p-2 rounded-md transition-colors">Adicionar</button>
+                    </form>
+                </div>
+
+                <!-- Seção PIX -->
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Ou contribua via PIX</h3>
+                    <div class="bg-stone-50 p-4 rounded-lg border">
+                        <div class="space-y-1">
+                            <p class="text-sm"><strong class="font-semibold text-stone-700 w-24 inline-block">Chave:</strong> <span id="pix-key">53 991853922</span> (Celular)</p>
+                            <p class="text-sm"><strong class="font-semibold text-stone-700 w-24 inline-block">Nome:</strong> Talisson Bergmann Hartwig</p>
+                            <p class="text-sm"><strong class="font-semibold text-stone-700 w-24 inline-block">Instituição:</strong> Nubank</p>
+                        </div>
+                        <button id="copy-pix-btn" class="mt-3 w-full bg-gray-600 hover:bg-gray-700 text-white font-bold p-2 rounded-md transition-colors text-sm flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                            Copiar Chave PIX
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Ranking -->
+                <div class="bg-stone-100 rounded-lg p-4">
+                    <h3 class="font-bold text-lg mb-3 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500" viewBox="0 0 20 20" fill="currentColor"><path d="M11.15 3.422a.75.75 0 00-1.06 0L8.25 5.262a.75.75 0 00.976 1.138 4.5 4.5 0 015.048 0 .75.75 0 00.976-1.138l-1.84-1.84zM10.5 9.75a.75.75 0 00-1.5 0v4.5a.75.75 0 001.5 0v-4.5z" /><path fill-rule="evenodd" d="M3.569 6.222l1.84-1.84a.75.75 0 00-1.06-1.06l-1.84 1.84a.75.75 0 101.06 1.06zM15.495 4.382l1.84 1.84a.75.75 0 101.06-1.06l-1.84-1.84a.75.75 0 00-1.06 1.06zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z" clip-rule="evenodd" /></svg>
+                        Top 5 Contribuintes
+                    </h3>
+                    <ol id="ranking-list" class="space-y-2">
+                        <li class="text-center p-4 text-stone-500">A calcular ranking...</li>
+                    </ol>
+                </div>
+
+                <!-- Contribuições Recentes -->
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Contribuições Recentes</h3>
+                    <div class="h-40 overflow-y-auto border rounded-lg p-2 bg-stone-50">
+                        <table class="w-full text-left text-sm">
+                            <thead class="sticky top-0 bg-stone-50">
+                                <tr><th class="p-2">Nome</th><th class="p-2">Valor</th><th class="p-2">Data</th></tr>
+                            </thead>
+                            <tbody id="contributions-list">
+                                <tr><td colspan="3" class="text-center p-4 text-stone-500">A carregar...</td></tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -186,16 +195,6 @@
         import { getFirestore, collection, addDoc, query, onSnapshot, orderBy } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
         import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 
-        // =================================================================================
-        // INSTRUÇÕES IMPORTANTES
-        // 1. Crie um NOVO projeto no Firebase em https://console.firebase.google.com/
-        // 2. Dentro do projeto, adicione um App da Web (ícone </>).
-        // 3. Copie o objeto 'firebaseConfig' que será exibido.
-        // 4. COLE o seu objeto 'firebaseConfig' aqui em baixo, substituindo o de exemplo.
-        // 5. No painel do Firebase, vá em Build > Authentication > Sign-in method e ATIVE o provedor "Anónimo".
-        // 6. No painel do Firebase, vá em Build > Firestore Database e CRIE um banco de dados em MODO DE TESTE.
-        // =================================================================================
-        
         const firebaseConfig = {
           apiKey: "AIzaSyC_vElQQxPJ7C-_G1WU4pM8O4PDFB0JWm0",
           authDomain: "guiacafe-d3b9c.firebaseapp.com",
@@ -243,8 +242,10 @@
                 const contributionsCollection = collection(db, 'contributions');
                 const copyPixBtn = document.getElementById('copy-pix-btn');
                 const pixKeySpan = document.getElementById('pix-key');
+                const goalProgressBar = document.getElementById('goal-progress-bar');
+                const goalProgressText = document.getElementById('goal-progress-text');
+                const GOAL_AMOUNT = 309.41;
 
-                // Lógica para copiar a chave PIX
                 copyPixBtn.addEventListener('click', () => {
                     const pixKey = pixKeySpan.innerText.replace(/\s/g, '');
                     const textArea = document.createElement('textarea');
@@ -331,6 +332,13 @@
                         });
                     }
                     totalAmountSpan.textContent = total.toFixed(2).replace('.', ',');
+                    
+                    // Update Goal Progress Bar
+                    const percentage = Math.min((total / GOAL_AMOUNT) * 100, 100);
+                    goalProgressBar.style.width = percentage + '%';
+                    goalProgressBar.innerText = Math.floor(percentage) + '%';
+                    goalProgressText.innerText = `R$ ${total.toFixed(2).replace('.',',')} / R$ ${GOAL_AMOUNT.toFixed(2).replace('.',',')}`;
+
                     updateRanking(contributors);
                 }, (error) => {
                     console.error("Erro ao carregar contribuições: ", error);
@@ -339,7 +347,7 @@
 
                 function updateRanking(contributors) {
                     const sortedContributors = Object.values(contributors).sort((a, b) => b.total - a.total);
-                    const topN = 3;
+                    const topN = 5;
                     const medalColors = ['text-yellow-400', 'text-gray-400', 'text-orange-400'];
                     
                     rankingList.innerHTML = '';
@@ -351,15 +359,22 @@
                             const li = document.createElement('li');
                             li.classList.add('flex', 'items-center', 'justify-between', 'p-3', 'rounded-lg', 'bg-white', 'shadow-sm');
                             
-                            const medalIcon = `
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ${medalColors[index] || 'text-stone-500'}" viewBox="0 0 20 20" fill="currentColor">
-                                    <path d="M11.15 3.422a.75.75 0 00-1.06 0L8.25 5.262a.75.75 0 00.976 1.138 4.5 4.5 0 015.048 0 .75.75 0 00.976-1.138l-1.84-1.84zM10.5 9.75a.75.75 0 00-1.5 0v4.5a.75.75 0 001.5 0v-4.5z" /><path fill-rule="evenodd" d="M3.569 6.222l1.84-1.84a.75.75 0 00-1.06-1.06l-1.84 1.84a.75.75 0 101.06 1.06zM15.495 4.382l1.84 1.84a.75.75 0 101.06-1.06l-1.84-1.84a.75.75 0 00-1.06 1.06zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z" clip-rule="evenodd" />
-                                </svg>
-                            `;
+                            let icon;
+                            if (index < 3) { // Gold, Silver, Bronze medals
+                                icon = `
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ${medalColors[index]}" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M11.15 3.422a.75.75 0 00-1.06 0L8.25 5.262a.75.75 0 00.976 1.138 4.5 4.5 0 015.048 0 .75.75 0 00.976-1.138l-1.84-1.84zM10.5 9.75a.75.75 0 00-1.5 0v4.5a.75.75 0 001.5 0v-4.5z" /><path fill-rule="evenodd" d="M3.569 6.222l1.84-1.84a.75.75 0 00-1.06-1.06l-1.84 1.84a.75.75 0 101.06 1.06zM15.495 4.382l1.84 1.84a.75.75 0 101.06-1.06l-1.84-1.84a.75.75 0 00-1.06 1.06zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z" clip-rule="evenodd" />
+                                    </svg>
+                                `;
+                            } else { // Star for 4th and 5th
+                                icon = `
+                                    <span class="font-bold text-stone-500 w-6 text-center">${index + 1}</span>
+                                `;
+                            }
                             
                             li.innerHTML = `
                                 <div class="flex items-center gap-3">
-                                    ${medalIcon}
+                                    ${icon}
                                     <span class="font-bold text-stone-700">${contributor.originalName}</span>
                                 </div>
                                 <span class="font-semibold text-sky-800">R$ ${contributor.total.toFixed(2).replace('.', ',')}</span>
