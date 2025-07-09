@@ -186,13 +186,23 @@
         import { getFirestore, collection, addDoc, query, onSnapshot, orderBy } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
         import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 
+        // =================================================================================
+        // INSTRUÇÕES IMPORTANTES
+        // 1. Crie um NOVO projeto no Firebase em https://console.firebase.google.com/
+        // 2. Dentro do projeto, adicione um App da Web (ícone </>).
+        // 3. Copie o objeto 'firebaseConfig' que será exibido.
+        // 4. COLE o seu objeto 'firebaseConfig' aqui em baixo, substituindo o de exemplo.
+        // 5. No painel do Firebase, vá em Build > Authentication > Sign-in method e ATIVE o provedor "Anónimo".
+        // 6. No painel do Firebase, vá em Build > Firestore Database e CRIE um banco de dados em MODO DE TESTE.
+        // =================================================================================
+        
         const firebaseConfig = {
-          apiKey: "AIzaSyC_wElQ0xvPJ7C-_G1WJ4jMBOAfPDFBqJm8",
+          apiKey: "AIzaSyC_vElQQxPJ7C-_G1WU4pM8O4PDFB0JWm0",
           authDomain: "guiacafe-d3b9c.firebaseapp.com",
           projectId: "guiacafe-d3b9c",
-          storageBucket: "guiacafe-d3b9c.appspot.com",
-          messagingSenderId: "198719238682",
-          appId: "1:198719238682:web:2835163b9468b87614fb23"
+          storageBucket: "guiacafe-d3b9c.firebasestorage.app",
+          messagingSenderId: "190713238682",
+          appId: "1:190713238682:web:2835163b9460b87614fb23"
         };
 
         if (firebaseConfig.apiKey === "SUA_API_KEY" || firebaseConfig.projectId === "SEU_PROJECT_ID") {
