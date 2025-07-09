@@ -17,6 +17,8 @@
             background-image: linear-gradient(to top right, #f5f5f4, #e7e5e4);
         }
         .icon-wrapper { flex-shrink: 0; }
+        .modal { display: none; }
+        .modal.is-open { display: flex; }
     </style>
 </head>
 <body class="text-stone-800">
@@ -47,14 +49,14 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.267.651 4.383 1.806 6.034l-1.225 4.429 4.57-1.192z"/></svg>
                         <strong class="text-md font-semibold">Entrar no Grupo</strong>
                     </a>
-                    <a href="https://mais.conteudo.wap.ind.br/wap/produtos/cozinha/cafeteira/cafeteira_digital_aroma_wcd1500_fw010084_fw010085/arquivos/manual/manual_cafeteira_digital_aroma_wcd1500.pdf" target="_blank" class="flex flex-col items-center justify-center gap-2 bg-amber-600 hover:bg-amber-700 text-white p-4 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H4zm4.707 5.707a1 1 0 00-1.414-1.414L6 7.586V6a1 1 0 00-2 0v3.5a1 1 0 001 1h3.5a1 1 0 000-2H7.586l1.121-1.121zM10 12a1 1 0 100 2h4a1 1 0 100-2h-4z" clip-rule="evenodd" /></svg>
-                        <strong class="text-md font-semibold">Ler o Manual</strong>
-                    </a>
                     <button id="open-contribution-modal" class="flex flex-col items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white p-4 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path d="M8.433 7.418c.158-.103.346-.196.57-.277a6.032 6.032 0 012.994 0c.224.08.412.174.57.277a3.033 3.033 0 011.427 2.582V13a1 1 0 01-1 1H6a1 1 0 01-1-1v-3.001c0-.986.47-1.905 1.433-2.581z" /><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zM3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm14 8a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd" /></svg>
                         <strong class="text-md font-semibold">Contribuições</strong>
                     </button>
+                    <a href="https://mais.conteudo.wap.ind.br/wap/produtos/cozinha/cafeteira/cafeteira_digital_aroma_wcd1500_fw010084_fw010085/arquivos/manual/manual_cafeteira_digital_aroma_wcd1500.pdf" target="_blank" class="flex flex-col items-center justify-center gap-2 bg-amber-600 hover:bg-amber-700 text-white p-4 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H4zm4.707 5.707a1 1 0 00-1.414-1.414L6 7.586V6a1 1 0 00-2 0v3.5a1 1 0 001 1h3.5a1 1 0 000-2H7.586l1.121-1.121zM10 12a1 1 0 100 2h4a1 1 0 100-2h-4z" clip-rule="evenodd" /></svg>
+                        <strong class="text-md font-semibold">Ler o Manual</strong>
+                    </a>
                 </div>
                  <p class="text-xs text-stone-500 mt-4 text-center">A contribuição é voluntária. O uso da cafeteira continua livre para todos.</p>
             </section>
@@ -65,6 +67,8 @@
                     PONTOS DE ATENÇÃO
                 </h2>
                 <ul class="list-disc list-inside mt-4 space-y-2 pl-2">
+                    <li>A sua contribuição é <strong>importante</strong>, ao colaborarmos, promovemos um ambiente de trabalho acolhedor e cooperativo.</li>
+                    <li><strong>Em caso de dúvidas</strong>, procure um dos administradores do Grupo do Café.</li>
                     <li>Use sempre o <strong>filtro de papel (nº 102)</strong> junto com o filtro permanente.</li>
                     <li><strong>Limpe tudo</strong> logo após o uso para que o próximo colega possa usar.</li>
                 </ul>
@@ -77,7 +81,7 @@
                         <li class="flex items-start gap-4"><span class="bg-amber-800 text-white text-sm font-bold w-7 h-7 flex items-center justify-center rounded-full mt-1 icon-wrapper">1</span><span>Abra a tampa superior da cafeteira.</span></li>
                         <li class="flex items-start gap-4"><span class="bg-amber-800 text-white text-sm font-bold w-7 h-7 flex items-center justify-center rounded-full mt-1 icon-wrapper">2</span><span>Dobre o filtro de papel nº 102 e coloque-o dentro do filtro permanente.</span></li>
                         <li class="flex items-start gap-4"><span class="bg-amber-800 text-white text-sm font-bold w-7 h-7 flex items-center justify-center rounded-full mt-1 icon-wrapper">3</span><span>Adicione o pó de café (sem passar da metade do filtro).</span></li>
-                        <li class="bg-amber-500/10 border-l-4 border-amber-500 text-amber-900 p-3 rounded-r-lg ml-11"><strong>Apenas café para coar.</strong> Não use solúvel ou cappuccino.</li>
+                        <li class="bg-amber-500/10 border-l-4 border-amber-500 text-amber-900 p-3 rounded-r-lg ml-11"><strong>Apenas café para coar.</strong> Não use café solúvel ou outros tipos de café.</li>
                         <li class="flex items-start gap-4"><span class="bg-amber-800 text-white text-sm font-bold w-7 h-7 flex items-center justify-center rounded-full mt-1 icon-wrapper">4</span><span>Feche a tampa até ouvir o "clique".</span></li>
                         <li class="flex items-start gap-4"><span class="bg-amber-800 text-white text-sm font-bold w-7 h-7 flex items-center justify-center rounded-full mt-1 icon-wrapper">5</span><span>Toque em <strong>Iniciar preparo</strong> no display e aguarde o fim.</span></li>
                         <li class="flex items-start gap-4"><span class="bg-amber-800 text-white text-sm font-bold w-7 h-7 flex items-center justify-center rounded-full mt-1 icon-wrapper">6</span><span>Sirva-se! Transfira todo o café para uma caneca ou garrafa térmica.</span></li>
@@ -135,17 +139,17 @@
 
                     <!-- Formulário -->
                     <div>
-                        <h3 class="font-bold text-lg mb-2">Adicionar Contribuição</h3>
+                        <h3 class="font-bold text-lg mb-2">Informações para contribuição</h3>
                         <form id="contribution-form" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                             <input type="text" id="contributor-name" placeholder="Seu nome" class="sm:col-span-2 w-full p-2 border rounded-md focus:ring-2 focus:ring-sky-500" required>
-                            <input type="number" id="contribution-amount" placeholder="Valor (R$)" step="0.01" min="0.01" class="w-full p-2 border rounded-md focus:ring-2 focus:ring-sky-500" required>
+                            <input type="number" id="contribution-amount" placeholder="10,00" step="0.01" min="0.01" class="w-full p-2 border rounded-md focus:ring-2 focus:ring-sky-500" required>
                             <button type="submit" class="sm:col-span-3 w-full bg-sky-600 hover:bg-sky-700 text-white font-bold p-2 rounded-md transition-colors">Adicionar</button>
                         </form>
                     </div>
 
                     <!-- Seção PIX -->
                     <div>
-                        <h3 class="font-bold text-lg mb-2">Ou contribua via PIX</h3>
+                        <h3 class="font-bold text-lg mb-2">Pagamento via PIX</h3>
                         <div class="bg-stone-50 p-4 rounded-lg border">
                             <div class="space-y-1">
                                 <p class="text-sm"><strong class="font-semibold text-stone-700 w-24 inline-block">Chave:</strong> <span id="pix-key">53 991853922</span> (Celular)</p>
