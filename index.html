@@ -23,11 +23,6 @@
 </head>
 <body class="text-stone-800">
 
-    <!-- Aviso de configuração do Firebase em falta -->
-    <div id="config-warning" class="hidden fixed top-0 left-0 right-0 bg-red-600 text-white p-4 text-center z-50 shadow-lg">
-        <strong>Atenção:</strong> A configuração do Firebase está em falta! Por favor, edite este ficheiro e cole as suas chaves de configuração do Firebase para que a secção de contribuições funcione.
-    </div>
-
     <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-3xl">
         
         <header class="text-center mb-10">
@@ -51,7 +46,7 @@
                     </a>
                     <button id="open-contribution-modal" class="flex flex-col items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white p-4 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path d="M8.433 7.418c.158-.103.346-.196.57-.277a6.032 6.032 0 012.994 0c.224.08.412.174.57.277a3.033 3.033 0 011.427 2.582V13a1 1 0 01-1 1H6a1 1 0 01-1-1v-3.001c0-.986.47-1.905 1.433-2.581z" /><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zM3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm14 8a1 1 0 11-2 0 1 1 0 012 0z" clip-rule="evenodd" /></svg>
-                        <strong class="text-md font-semibold">Contribuições</strong>
+                        <strong class="text-md font-semibold">Agradecimentos</strong>
                     </button>
                     <a href="https://mais.conteudo.wap.ind.br/wap/produtos/cozinha/cafeteira/cafeteira_digital_aroma_wcd1500_fw010084_fw010085/arquivos/manual/manual_cafeteira_digital_aroma_wcd1500.pdf" target="_blank" class="flex flex-col items-center justify-center gap-2 bg-amber-600 hover:bg-amber-700 text-white p-4 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H4zm4.707 5.707a1 1 0 00-1.414-1.414L6 7.586V6a1 1 0 00-2 0v3.5a1 1 0 001 1h3.5a1 1 0 000-2H7.586l1.121-1.121zM10 12a1 1 0 100 2h4a1 1 0 100-2h-4z" clip-rule="evenodd" /></svg>
@@ -67,8 +62,6 @@
                     PONTOS DE ATENÇÃO
                 </h2>
                 <ul class="list-disc list-inside mt-4 space-y-2 pl-2">
-                    <li>A sua contribuição é <strong>importante</strong>, ao colaborarmos, promovemos um ambiente de trabalho acolhedor e cooperativo.</li>
-                    <li><strong>Em caso de dúvidas</strong>, procure um dos administradores do Grupo do Café.</li>
                     <li>Use sempre o <strong>filtro de papel (nº 102)</strong> junto com o filtro permanente.</li>
                     <li><strong>Limpe tudo</strong> logo após o uso para que o próximo colega possa usar.</li>
                 </ul>
@@ -79,7 +72,7 @@
                     <h2 class="text-2xl font-bold text-amber-800 mb-5 border-b-2 border-amber-200 pb-3">1. Preparo do Café</h2>
                     <ul class="space-y-4">
                         <li class="flex items-start gap-4"><span class="bg-amber-800 text-white text-sm font-bold w-7 h-7 flex items-center justify-center rounded-full mt-1 icon-wrapper">1</span><span>Abra a tampa superior da cafeteira e adicione água ao reservatório.</span></li>
-                        <li class="bg-amber-500/10 border-l-4 border-amber-500 text-amber-900 p-3 rounded-r-lg ml-11">Não ultrapasse os <strong>limites</strong> do reservatório.</li>
+                         <li class="bg-amber-500/10 border-l-4 border-amber-500 text-amber-900 p-3 rounded-r-lg ml-11">Não ultrapasse os <strong>limites</strong> do reservatório.</li>
                         <li class="flex items-start gap-4"><span class="bg-amber-800 text-white text-sm font-bold w-7 h-7 flex items-center justify-center rounded-full mt-1 icon-wrapper">2</span><span>Dobre o filtro de papel nº 102 e coloque-o dentro do filtro permanente.</span></li>
                         <li class="flex items-start gap-4"><span class="bg-amber-800 text-white text-sm font-bold w-7 h-7 flex items-center justify-center rounded-full mt-1 icon-wrapper">3</span><span>Adicione o pó de café (sem passar da metade do filtro).</span></li>
                         <li class="bg-amber-500/10 border-l-4 border-amber-500 text-amber-900 p-3 rounded-r-lg ml-11"><strong>Apenas café para coar.</strong> Não use café solúvel ou outros tipos de café.</li>
@@ -108,85 +101,56 @@
         </footer>
     </div>
 
-    <!-- Modal de Contribuição -->
+    <!-- Modal de Agradecimento -->
     <div id="contribution-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
         <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl p-6 md:p-8 relative flex flex-col max-h-[90vh]">
             <div class="flex-shrink-0">
                 <button id="close-contribution-modal" class="absolute top-4 right-4 text-stone-500 hover:text-stone-800">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
                 </button>
-                <h2 class="text-2xl font-bold text-sky-800 mb-2">Painel de Contribuições</h2>
-                <p class="text-stone-600 mb-6">O total arrecadado é atualizado em tempo real.</p>
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-green-600">Meta Concluída!</h2>
+                    <p class="text-stone-600 mt-2">Muito obrigado a todos que colaboraram para a nossa nova cafeteira!</p>
+                </div>
             </div>
             
-            <div class="flex-grow overflow-y-auto pr-2">
+            <div class="flex-grow overflow-y-auto pr-2 mt-6">
                 <div class="flex flex-col gap-6">
-                    <!-- Total e Meta -->
-                    <div class="space-y-4">
-                        <div class="bg-sky-100 text-sky-900 rounded-lg p-4 text-center">
-                            <p class="text-lg">Total Arrecadado</p>
-                            <p class="text-4xl font-extrabold">R$ <span id="total-amount">0,00</span></p>
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-center text-sm font-medium text-stone-600 mb-1">
-                                <span>Progresso da Meta</span>
-                                <span id="goal-progress-text">R$ 0,00 / R$ 309,41</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-4">
-                                <div id="goal-progress-bar" class="bg-green-500 h-4 rounded-full text-center text-white text-xs font-bold leading-4" style="width: 0%;">0%</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Formulário -->
-                    <div>
-                        <h3 class="font-bold text-lg mb-2">Informações para contribuição</h3>
-                        <form id="contribution-form" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                            <input type="text" id="contributor-name" placeholder="Seu nome" class="sm:col-span-2 w-full p-2 border rounded-md focus:ring-2 focus:ring-sky-500" required>
-                            <input type="number" id="contribution-amount" placeholder="10,00" step="0.01" min="0.01" class="w-full p-2 border rounded-md focus:ring-2 focus:ring-sky-500" required>
-                            <button type="submit" class="sm:col-span-3 w-full bg-sky-600 hover:bg-sky-700 text-white font-bold p-2 rounded-md transition-colors">Adicionar</button>
-                        </form>
-                    </div>
-
-                    <!-- Seção PIX -->
-                    <div>
-                        <h3 class="font-bold text-lg mb-2">Pagamento via PIX</h3>
-                        <div class="bg-stone-50 p-4 rounded-lg border">
-                            <div class="space-y-1">
-                                <p class="text-sm"><strong class="font-semibold text-stone-700 w-24 inline-block">Chave:</strong> <span id="pix-key">53 991853922</span> (Celular)</p>
-                                <p class="text-sm"><strong class="font-semibold text-stone-700 w-24 inline-block">Nome:</strong> Talisson Bergmann Hartwig</p>
-                                <p class="text-sm"><strong class="font-semibold text-stone-700 w-24 inline-block">Instituição:</strong> Nubank</p>
-                            </div>
-                            <button id="copy-pix-btn" class="mt-3 w-full bg-gray-600 hover:bg-gray-700 text-white font-bold p-2 rounded-md transition-colors text-sm flex items-center justify-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                                </svg>
-                                Copiar Chave PIX
-                            </button>
-                        </div>
-                    </div>
-
                     <!-- Ranking -->
                     <div class="bg-stone-100 rounded-lg p-4">
-                        <h3 class="font-bold text-lg mb-3 flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500" viewBox="0 0 20 20" fill="currentColor"><path d="M11.15 3.422a.75.75 0 00-1.06 0L8.25 5.262a.75.75 0 00.976 1.138 4.5 4.5 0 015.048 0 .75.75 0 00.976-1.138l-1.84-1.84zM10.5 9.75a.75.75 0 00-1.5 0v4.5a.75.75 0 001.5 0v-4.5z" /><path fill-rule="evenodd" d="M3.569 6.222l1.84-1.84a.75.75 0 00-1.06-1.06l-1.84 1.84a.75.75 0 101.06 1.06zM15.495 4.382l1.84 1.84a.75.75 0 101.06-1.06l-1.84-1.84a.75.75 0 00-1.06 1.06zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z" clip-rule="evenodd" /></svg>
-                            Top 5 Contribuintes
-                        </h3>
-                        <ol id="ranking-list" class="space-y-2">
-                            <li class="text-center p-4 text-stone-500">A calcular ranking...</li>
-                        </ol>
+                        <h3 class="font-bold text-lg mb-4 text-center">Pódio dos Contribuintes</h3>
+                        <div class="flex justify-center items-end gap-1 text-center text-white">
+                            <!-- 2nd Place -->
+                            <div class="w-1/3 bg-gray-400 rounded-t-lg pt-2 pb-1 h-24 flex flex-col justify-between">
+                                <span class="font-bold text-lg">Mesquitta</span>
+                                <div class="bg-gray-500 text-2xl font-extrabold p-1">2</div>
+                            </div>
+                            <!-- 1st Place -->
+                            <div class="w-1/3 bg-yellow-400 rounded-t-lg pt-2 pb-1 h-32 flex flex-col justify-between">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto text-yellow-200" viewBox="0 0 20 20" fill="currentColor">
+                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <span class="font-bold text-xl">Felipe Bier</span>
+                                <div class="bg-yellow-500 text-3xl font-extrabold p-1">1</div>
+                            </div>
+                            <!-- 3rd Place -->
+                            <div class="w-1/3 bg-orange-400 rounded-t-lg pt-2 pb-1 h-20 flex flex-col justify-between">
+                                <span class="font-bold text-md">Krause</span>
+                                <div class="bg-orange-500 text-xl font-extrabold p-1">3</div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Contribuições Recentes -->
+                    <!-- Lista Completa -->
                     <div>
-                        <h3 class="font-bold text-lg mb-2">Contribuições Recentes</h3>
-                        <div class="h-40 overflow-y-auto border rounded-lg p-2 bg-stone-50">
+                        <h3 class="font-bold text-lg mb-2">Todos que Ajudaram</h3>
+                        <div class="h-48 overflow-y-auto border rounded-lg p-2 bg-stone-50">
                             <table class="w-full text-left text-sm">
                                 <thead class="sticky top-0 bg-stone-50">
-                                    <tr><th class="p-2">Nome</th><th class="p-2">Valor</th><th class="p-2">Data</th></tr>
+                                    <tr><th class="p-2">Nome</th></tr>
                                 </thead>
-                                <tbody id="contributions-list">
-                                    <tr><td colspan="3" class="text-center p-4 text-stone-500">A carregar...</td></tr>
+                                <tbody id="full-contributors-list">
+                                    <!-- A lista será preenchida aqui -->
                                 </tbody>
                             </table>
                         </div>
@@ -198,212 +162,57 @@
 
     <!-- Firebase SDKs -->
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-        import { getFirestore, collection, addDoc, query, onSnapshot, orderBy } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
-        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+        const modal = document.getElementById('contribution-modal');
+        const openModalBtn = document.getElementById('open-contribution-modal');
+        const closeModalBtn = document.getElementById('close-contribution-modal');
+        const fullContributorsList = document.getElementById('full-contributors-list');
 
-        const firebaseConfig = {
-          apiKey: "AIzaSyC_vElQQxPJ7C-_G1WU4pM8O4PDFB0JWm0",
-          authDomain: "guiacafe-d3b9c.firebaseapp.com",
-          projectId: "guiacafe-d3b9c",
-          storageBucket: "guiacafe-d3b9c.firebasestorage.app",
-          messagingSenderId: "190713238682",
-          appId: "1:190713238682:web:2835163b9460b87614fb23"
-        };
+        const allContributors = [
+            { name: 'Felipe Bier', amount: 50.00 },
+            { name: 'Mesquitta', amount: 42.00 },
+            { name: 'Krause', amount: 41.00 },
+            { name: 'Milton Portela', amount: 40.00 },
+            { name: 'Jonia Chiarelli', amount: 30.00 },
+            { name: 'Geovana', amount: 20.00 },
+            { name: 'Giliany', amount: 15.00 },
+            { name: 'Gabriel Acosta', amount: 15.00 },
+            { name: 'Ana Zurchimitten', amount: 11.41 },
+            { name: 'Bruna', amount: 10.00 },
+            { name: 'Luisa', amount: 10.00 },
+            { name: 'Priscila', amount: 10.00 },
+            { name: 'Pedro', amount: 10.00 },
+            { name: 'Michel Ziebell', amount: 5.00 }
+        ].sort((a, b) => b.amount - a.amount);
 
-        if (firebaseConfig.apiKey === "SUA_API_KEY" || firebaseConfig.projectId === "SEU_PROJECT_ID") {
-            document.getElementById('config-warning').classList.remove('hidden');
-            const openModalBtn = document.getElementById('open-contribution-modal');
-            openModalBtn.disabled = true;
-            openModalBtn.classList.add('opacity-50', 'cursor-not-allowed');
-            console.error("CONFIGURAÇÃO DO FIREBASE EM FALTA. Edite este ficheiro e adicione a sua firebaseConfig.");
-        } else {
-            initializeAppAndSetup();
+        function populateFullList() {
+            fullContributorsList.innerHTML = '';
+            allContributors.forEach(c => {
+                const row = document.createElement('tr');
+                row.classList.add('border-b', 'border-stone-200');
+                row.innerHTML = `
+                    <td class="p-2 font-medium">${c.name}</td>
+                `;
+                fullContributorsList.appendChild(row);
+            });
         }
+        
+        openModalBtn.addEventListener('click', () => {
+            populateFullList();
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        });
 
-        async function initializeAppAndSetup() {
-            try {
-                const app = initializeApp(firebaseConfig);
-                const auth = getAuth(app);
-                const db = getFirestore(app);
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        });
 
-                await signInAnonymously(auth);
-                console.log("Autenticação anónima bem-sucedida.");
-
-                const modal = document.getElementById('contribution-modal');
-                const openModalBtn = document.getElementById('open-contribution-modal');
-                const closeModalBtn = document.getElementById('close-contribution-modal');
-                
-                openModalBtn.addEventListener('click', () => {
-                    modal.classList.remove('hidden');
-                    modal.classList.add('flex');
-                });
-                closeModalBtn.addEventListener('click', () => {
-                    modal.classList.add('hidden');
-                    modal.classList.remove('flex');
-                });
-                window.addEventListener('click', (event) => {
-                    if (event.target === modal) {
-                        modal.classList.add('hidden');
-                        modal.classList.remove('flex');
-                    }
-                });
-
-                const contributionForm = document.getElementById('contribution-form');
-                const contributionsList = document.getElementById('contributions-list');
-                const totalAmountSpan = document.getElementById('total-amount');
-                const rankingList = document.getElementById('ranking-list');
-                const contributionsCollection = collection(db, 'contributions');
-                const copyPixBtn = document.getElementById('copy-pix-btn');
-                const pixKeySpan = document.getElementById('pix-key');
-                const goalProgressBar = document.getElementById('goal-progress-bar');
-                const goalProgressText = document.getElementById('goal-progress-text');
-                const GOAL_AMOUNT = 309.41;
-
-                copyPixBtn.addEventListener('click', () => {
-                    const pixKey = pixKeySpan.innerText.replace(/\s/g, '');
-                    const textArea = document.createElement('textarea');
-                    textArea.value = pixKey;
-                    textArea.style.top = "0";
-                    textArea.style.left = "0";
-                    textArea.style.position = "fixed";
-                    document.body.appendChild(textArea);
-                    textArea.focus();
-                    textArea.select();
-                    try {
-                        document.execCommand('copy');
-                        const originalText = copyPixBtn.innerHTML;
-                        copyPixBtn.innerHTML = 'Copiado!';
-                        copyPixBtn.classList.add('bg-green-600', 'hover:bg-green-700');
-                        copyPixBtn.classList.remove('bg-gray-600', 'hover:bg-gray-700');
-                        setTimeout(() => {
-                            copyPixBtn.innerHTML = originalText;
-                            copyPixBtn.classList.remove('bg-green-600', 'hover:bg-green-700');
-                            copyPixBtn.classList.add('bg-gray-600', 'hover:bg-gray-700');
-                        }, 2000);
-                    } catch (err) {
-                        console.error('Oops, unable to copy', err);
-                    }
-                    document.body.removeChild(textArea);
-                });
-
-                contributionForm.addEventListener('submit', async (e) => {
-                    e.preventDefault();
-                    
-                    const nameInput = document.getElementById('contributor-name');
-                    const amountInput = document.getElementById('contribution-amount');
-                    const name = nameInput.value;
-                    const amount = parseFloat(amountInput.value);
-
-                    if (name && amount > 0) {
-                        try {
-                            await addDoc(contributionsCollection, {
-                                name: name,
-                                amount: amount,
-                                createdAt: new Date()
-                            });
-                            contributionForm.reset();
-                        } catch (error) {
-                            console.error("Erro ao adicionar contribuição: ", error);
-                            alert("Ocorreu um erro ao enviar a sua contribuição.");
-                        }
-                    }
-                });
-
-                const q = query(contributionsCollection, orderBy('createdAt', 'desc'));
-                onSnapshot(q, (snapshot) => {
-                    contributionsList.innerHTML = ''; 
-                    let total = 0;
-                    const contributors = {};
-
-                    if (snapshot.empty) {
-                        contributionsList.innerHTML = '<tr><td colspan="3" class="text-center p-4 text-stone-500">Nenhuma contribuição ainda. Seja o primeiro!</td></tr>';
-                    } else {
-                        snapshot.forEach(doc => {
-                            const contribution = doc.data();
-                            total += contribution.amount;
-
-                            const date = contribution.createdAt.toDate();
-                            const formattedDate = date.toLocaleDateString('pt-BR');
-                            const row = document.createElement('tr');
-                            row.classList.add('border-b', 'border-stone-200');
-                            row.innerHTML = `
-                                <td class="p-2 font-medium">${contribution.name}</td>
-                                <td class="p-2">R$ ${contribution.amount.toFixed(2).replace('.', ',')}</td>
-                                <td class="p-2 text-stone-500">${formattedDate}</td>
-                            `;
-                            contributionsList.appendChild(row);
-
-                            const lowerCaseName = contribution.name.trim().toLowerCase();
-                            if (contributors[lowerCaseName]) {
-                                contributors[lowerCaseName].total += contribution.amount;
-                            } else {
-                                contributors[lowerCaseName] = {
-                                    originalName: contribution.name.trim(),
-                                    total: contribution.amount
-                                };
-                            }
-                        });
-                    }
-                    totalAmountSpan.textContent = total.toFixed(2).replace('.', ',');
-                    
-                    // Update Goal Progress Bar
-                    const percentage = Math.min((total / GOAL_AMOUNT) * 100, 100);
-                    goalProgressBar.style.width = percentage + '%';
-                    goalProgressBar.innerText = Math.floor(percentage) + '%';
-                    goalProgressText.innerText = `R$ ${total.toFixed(2).replace('.',',')} / R$ ${GOAL_AMOUNT.toFixed(2).replace('.',',')}`;
-
-                    updateRanking(contributors);
-                }, (error) => {
-                    console.error("Erro ao carregar contribuições: ", error);
-                    contributionsList.innerHTML = '<tr><td colspan="3" class="text-center p-4 text-red-500">Erro ao carregar dados. Verifique a consola.</td></tr>';
-                });
-
-                function updateRanking(contributors) {
-                    const sortedContributors = Object.values(contributors).sort((a, b) => b.total - a.total);
-                    const topN = 5;
-                    const medalColors = ['text-yellow-400', 'text-gray-400', 'text-orange-400'];
-                    
-                    rankingList.innerHTML = '';
-
-                    if (sortedContributors.length === 0) {
-                        rankingList.innerHTML = '<li class="text-center p-2 text-stone-500">Aguardando a primeira contribuição!</li>';
-                    } else {
-                        sortedContributors.slice(0, topN).forEach((contributor, index) => {
-                            const li = document.createElement('li');
-                            li.classList.add('flex', 'items-center', 'justify-between', 'p-3', 'rounded-lg', 'bg-white', 'shadow-sm');
-                            
-                            let icon;
-                            if (index < 3) { // Gold, Silver, Bronze medals
-                                icon = `
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ${medalColors[index]}" viewBox="0 0 20 20" fill="currentColor">
-                                        <path d="M11.15 3.422a.75.75 0 00-1.06 0L8.25 5.262a.75.75 0 00.976 1.138 4.5 4.5 0 015.048 0 .75.75 0 00.976-1.138l-1.84-1.84zM10.5 9.75a.75.75 0 00-1.5 0v4.5a.75.75 0 001.5 0v-4.5z" /><path fill-rule="evenodd" d="M3.569 6.222l1.84-1.84a.75.75 0 00-1.06-1.06l-1.84 1.84a.75.75 0 101.06 1.06zM15.495 4.382l1.84 1.84a.75.75 0 101.06-1.06l-1.84-1.84a.75.75 0 00-1.06 1.06zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z" clip-rule="evenodd" />
-                                    </svg>
-                                `;
-                            } else { // Star for 4th and 5th
-                                icon = `
-                                    <span class="font-bold text-stone-500 w-6 text-center">${index + 1}</span>
-                                `;
-                            }
-                            
-                            li.innerHTML = `
-                                <div class="flex items-center gap-3">
-                                    ${icon}
-                                    <span class="font-bold text-stone-700">${contributor.originalName}</span>
-                                </div>
-                                <span class="font-semibold text-sky-800">R$ ${contributor.total.toFixed(2).replace('.', ',')}</span>
-                            `;
-                            rankingList.appendChild(li);
-                        });
-                    }
-                }
-
-            } catch (error) {
-                console.error("Erro geral na inicialização do Firebase:", error);
-                document.getElementById('config-warning').innerText = "Erro ao conectar com o Firebase. Verifique a consola.";
-                document.getElementById('config-warning').classList.remove('hidden');
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
             }
-        }
+        });
     </script>
 </body>
 </html>
